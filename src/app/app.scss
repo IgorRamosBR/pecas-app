@@ -15,10 +15,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .breadcrumb {
-    padding: 10px 15px;
+    padding: 15px 15px;
     list-style: none;
     background: #000000;
-    height: 40px;
+    height: 50px;
     font-weight: normal;
     color: #FFF;
     overflow: hidden;
@@ -33,7 +33,7 @@
     }
     .ion-chevron-right {
       padding: 0 10px;
-      font-size: 12px;
+      font-size: 10px;
       color: #FFF;
     }
   }
