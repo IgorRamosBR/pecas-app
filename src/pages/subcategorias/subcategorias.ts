@@ -17,16 +17,22 @@ import { SubcategoriaProvider } from '../../providers/subcategoria/subcategoria'
 export class SubcategoriasPage {
 
   categoriaId = 0;
+  categoriaNome = '';
   subcategorias = [];
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               private subcategoriaProvider: SubcategoriaProvider) {
     this.categoriaId = navParams.get('idCategoria');
+    this.categoriaNome = navParams.get('nomeCategoria');
   }
 
   ionViewDidLoad() {
     this.buscarSubcategorias();
+  }
+
+  voltaCategoria() {
+    this.navCtrl.pop();
   }
 
   buscarSubcategorias() {
