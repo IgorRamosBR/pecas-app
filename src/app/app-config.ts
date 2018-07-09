@@ -1,5 +1,3 @@
-import { InjectionToken } from '@angular/core';
-
 export interface ApplicationConfig {
   apiEndpoint: string;
  }

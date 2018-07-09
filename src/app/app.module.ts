@@ -11,13 +11,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategoriaProvider } from '../providers/categoria/categoria';
 import { CategoriasPage } from '../pages/categorias/categorias';
 import { HttpModule } from '@angular/http';
+import { SubcategoriasPage } from '../pages/subcategorias/subcategorias';
+import { SubcategoriaProvider } from '../providers/subcategoria/subcategoria';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    CategoriasPage
+    CategoriasPage,
+    SubcategoriasPage
   ],
   imports: [
     BrowserModule,
@@ -29,13 +32,15 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     ListPage,
-    CategoriasPage
+    CategoriasPage,
+    SubcategoriasPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CategoriaProvider
+    CategoriaProvider,
+    SubcategoriaProvider
   ]
 })
 export class AppModule {}

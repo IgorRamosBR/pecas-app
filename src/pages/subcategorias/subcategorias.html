@@ -3,14 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Categorias de peças</ion-title>
+    <ion-title>Escolha uma subcategoria</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let categoria of categorias" (click)="openPage(categoria.id)">
-      <span>{{categoria.nome}}</span>
+    <button ion-item *ngFor="let subcategoria of subcategorias" (click)="openPage(subcategoria.id)">
+      <span>{{subcategoria.nome}}</span>
     </button>
   </ion-list>
 </ion-content>

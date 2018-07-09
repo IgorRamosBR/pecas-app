@@ -43,5 +43,14 @@
         {"id": 41, "nome": "Suspensão"},
         {"id": 42, "nome": "Tapetes"},
         {"id": 43, "nome": "Vidros"}
+    ],
+    "subcategorias": [
+        {"id": 1, "nome": "Acabamentos Externos"},
+        {"id": 2, "nome": "Acabamentos Internos"},
+        {"id": 3, "nome": "Acessórios"},
+        {"id": 4, "nome": "Alimentação de Combustível"},
+        {"id": 5, "nome": "Amortecedores"},
+        {"id": 6, "nome": "Ar Condicionado"}
     ]
+
 }
