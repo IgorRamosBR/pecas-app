@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { PecaProvider } from '../../providers/peca/peca';
+
 /**
  * Generated class for the PecasPage page.
  *
@@ -17,14 +19,17 @@ export class PecasPage {
 
   categoriaNome = '';
   subcategoriaNome = '';
+  pecas = []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private pecasProvider: PecaProvider) {
     this.categoriaNome = navParams.get('nomeCategoria');
     this.subcategoriaNome = navParams.get('nomeSubcategoria').nome;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PecasPage');
+    this.buscarTodasAsPecas();
   }
 
   voltaCategoria() {
@@ -33,6 +38,11 @@ export class PecasPage {
   
   voltaSubcategoria() {
     this.navCtrl.pop();
+  }
+
+  buscarTodasAsPecas() {
+    this.pecasProvider.buscarTodasPecas()
+      .then(pecas => this.pecas = pecas);
   }
 
 }

@@ -14,7 +14,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class CategoriaProvider {
 
-  API_URL = MY_CONFIG.apiEndpoint + '/categorias'
+  private API_URL = MY_CONFIG.apiEndpoint + '/categorias';
 
   constructor(public http: Http) {
     console.log('Hello CategoriaProvider Provider');

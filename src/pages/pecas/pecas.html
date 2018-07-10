@@ -29,35 +29,36 @@
       </li>
   </ul>
   <!-- end Breadcrumb -->
+  <ion-list>
+    <ion-card *ngFor="let peca of pecas">
+      <ion-card-content style="padding-bottom: 0px; padding-top: 0px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <ion-icon name="camera" class="icon-cam"></ion-icon>
+              <p> Ver foto </p>
+            </ion-col>
+            <ion-col col-10>
+              <span class="card-brand">{{peca.marca}} </span><br>
+              <span class="card-title">{{peca.nome}}</span><br>
+              <span class="card-description">{{peca.descricao}}</span>
+              <sub></sub>
+            </ion-col>
+            <ion-col col-2>
+              <div class="card-price" padding-top>{{peca.preco | currency:'BRL'}}</div>
+            </ion-col>
+            <ion-col col-10>
+                <div text-right>
+                    <span style="font-weight: 500;"> {{peca.loja.nome}}</span><br>
+                    <span> {{peca.loja.local}} </span>
+                  </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-  <ion-card>
-    <ion-card-content style="padding-bottom: 0px; padding-top: 0px;">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-2>
-            <ion-icon name="camera" class="icon-cam"></ion-icon>
-            <p> Ver foto </p>
-          </ion-col>
-          <ion-col col-10>
-            <span class="card-brand">Nakata </span><br>
-            <span class="card-title">Amortecedor dianteiro</span><br>
-            <span class="card-description">Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...</span>
-            <sub></sub>
-          </ion-col>
-          <ion-col col-2>
-            <div class="card-price" padding-top>R$356,00</div>
-          </ion-col>
-          <ion-col col-10>
-              <div text-right>
-                  <span style="font-weight: 500;"> Gregório Autopeças</span><br>
-                  <span> Campo Grande </span>
-                </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+        <!-- Add card content here! -->
+      </ion-card-content>
 
-      <!-- Add card content here! -->
-    </ion-card-content>
-
-  </ion-card>
+    </ion-card>
+  </ion-list>
 </ion-content>

@@ -51,6 +51,74 @@
         {"id": 4, "nome": "Alimentação de Combustível"},
         {"id": 5, "nome": "Amortecedores"},
         {"id": 6, "nome": "Ar Condicionado"}
+    ],
+    "pecas": [
+        {
+            "id": 1, 
+            "nome": "Suspensão dianteira",
+            "marca": "Nakata", 
+            "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
+            "preco": 350.99,
+            "loja": {
+                "nome": "Gregorio Autopeças",
+                "local": "Campo Grande"
+            }
+        },
+        {
+            "id": 2, 
+            "nome": "Catalisador",
+            "marca": "Eaton", 
+            "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
+            "preco": 725.99,
+            "loja": {
+                "nome": "Smith Autopeças",
+                "local": "Campo Grande"
+            }
+        },
+        {
+            "id": 3, 
+            "nome": "Filtro de Óleo",
+            "marca": "Volvo", 
+            "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
+            "preco": 105.99,
+            "loja": {
+                "nome": "Smith Autopeças",
+                "local": "Campo Grande"
+            }
+        },
+        {
+            "id": 4, 
+            "nome": "Pastilha de Freio",
+            "marca": "Caloi", 
+            "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
+            "preco": 25.99,
+            "loja": {
+                "nome": "Gregorio Autopeças",
+                "local": "Campo Grande"
+            }
+        },
+        {
+            "id": 5, 
+            "nome": "Embreagem",
+            "marca": "Nakata", 
+            "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
+            "preco": 325.99,
+            "loja": {
+                "nome": "Smith Autopeças",
+                "local": "Campo Grande"
+            }
+        },
+        {
+            "id": 6, 
+            "nome": "Iginição",
+            "marca": "Chevs", 
+            "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
+            "preco": 225.99,
+            "loja": {
+                "nome": "Gregorio Autopeças",
+                "local": "Campo Grande"
+            }
+        }
     ]
 
 }

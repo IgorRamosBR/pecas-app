@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { SubcategoriasPage } from '../pages/subcategorias/subcategorias';
 import { SubcategoriaProvider } from '../providers/subcategoria/subcategoria';
 import { PecasPage } from '../pages/pecas/pecas';
+import { PecaProvider } from '../providers/peca/peca';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PecasPage } from '../pages/pecas/pecas';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CategoriaProvider,
-    SubcategoriaProvider
+    SubcategoriaProvider,
+    PecaProvider
   ]
 })
 export class AppModule {}
