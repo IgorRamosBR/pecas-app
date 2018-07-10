@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SubcategoriaProvider } from '../../providers/subcategoria/subcategoria';
+import { PecasPage } from '../pecas/pecas';
 
 /**
  * Generated class for the SubcategoriasPage page.
@@ -33,6 +34,13 @@ export class SubcategoriasPage {
 
   voltaCategoria() {
     this.navCtrl.pop();
+  }
+
+  openPage(subcategoriaNome) {
+    this.navCtrl.push(PecasPage, {
+      nomeCategoria: this.categoriaNome,
+      nomeSubcategoria: subcategoriaNome
+    });
   }
 
   buscarSubcategorias() {

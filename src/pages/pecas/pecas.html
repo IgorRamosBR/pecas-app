@@ -1,0 +1,63 @@
+<!--
+  Generated template for the PecasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Catálogo de peças</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- Begin Breadcrumb -->
+  <ul class="breadcrumb">
+    <li>
+      <a href="#">Todas as peças</a>
+      <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="ion-chevron-right"></ion-icon>
+    </li>
+    <li (click)="voltaCategoria()">
+      <a href="#">{{categoriaNome}}</a>
+      <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="ion-chevron-right"></ion-icon>
+    </li>
+    <li (click)="voltaSubcategoria()">
+        <a href="#">{{subcategoriaNome}}</a>
+      </li>
+  </ul>
+  <!-- end Breadcrumb -->
+
+  <ion-card>
+    <ion-card-content style="padding-bottom: 0px; padding-top: 0px;">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <ion-icon name="camera" class="icon-cam"></ion-icon>
+            <p> Ver foto </p>
+          </ion-col>
+          <ion-col col-10>
+            <span class="card-brand">Nakata </span><br>
+            <span class="card-title">Amortecedor dianteiro</span><br>
+            <span class="card-description">Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...</span>
+            <sub></sub>
+          </ion-col>
+          <ion-col col-2>
+            <div class="card-price" padding-top>R$356,00</div>
+          </ion-col>
+          <ion-col col-10>
+              <div text-right>
+                  <span style="font-weight: 500;"> Gregório Autopeças</span><br>
+                  <span> Campo Grande </span>
+                </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- Add card content here! -->
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

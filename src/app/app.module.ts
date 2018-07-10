@@ -13,6 +13,7 @@ import { CategoriasPage } from '../pages/categorias/categorias';
 import { HttpModule } from '@angular/http';
 import { SubcategoriasPage } from '../pages/subcategorias/subcategorias';
 import { SubcategoriaProvider } from '../providers/subcategoria/subcategoria';
+import { PecasPage } from '../pages/pecas/pecas';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SubcategoriaProvider } from '../providers/subcategoria/subcategoria';
     HomePage,
     ListPage,
     CategoriasPage,
-    SubcategoriasPage
+    SubcategoriasPage,
+    PecasPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { SubcategoriaProvider } from '../providers/subcategoria/subcategoria';
     HomePage,
     ListPage,
     CategoriasPage,
-    SubcategoriasPage
+    SubcategoriasPage,
+    PecasPage
   ],
   providers: [
     StatusBar,

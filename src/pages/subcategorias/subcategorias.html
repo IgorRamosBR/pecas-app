@@ -15,7 +15,7 @@
   </ul>
   <!-- end Breadcrumb -->
   <ion-list>
-    <button ion-item *ngFor="let subcategoria of subcategorias">
+    <button ion-item *ngFor="let subcategoria of subcategorias" (click)="openPage(subcategoria)">
       <span>{{subcategoria.nome}}</span>
     </button>
   </ion-list>
