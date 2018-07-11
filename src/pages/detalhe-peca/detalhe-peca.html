@@ -7,22 +7,22 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>detalhe-peca</ion-title>
+    <ion-title>{{peca.nome}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-    <img class="img-peca"src="https://www.pontofrio-imagens.com.br/automotivo/Suspensao-Direcao/10625902/609663902/Kit-Suspensao-Rosca-Regulavel-Tebao-Nakata---Fox-11-em-Diante-10625902.jpg"/>
-    <span class="title-peca">Suspensão a ar</span>
-    <span class="codigo-peca">Cód.: XJF48D3</span><br>
-    <span class="marca-peca">Nakata </span><br>
-    <div class="descricao-peca" text-justify>Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...</div>
+    <img *ngIf="peca.foto != ''" class="img-peca" src={{peca.foto}}/>
+    <span class="title-peca">{{peca.nome}}</span>
+    <span class="codigo-peca">Cód.: {{peca.codigo}}</span><br>
+    <span class="marca-peca">{{peca.marca}} </span><br>
+    <div class="descricao-peca" text-justify>{{peca.descricao}}</div>
     <ion-grid no-padding>
       <ion-row>
         <ion-col col-6>
-            <div class="preco-peca">R$345,00</div>
+            <div class="preco-peca">{{peca.preco | currency:'BRL'}}</div>
         </ion-col>
         <ion-col col-6>
           <button ion-button icon-start class="btn-adicionar" color="secondary" outline>
@@ -36,14 +36,14 @@
 
     <div style="margin:20px; background-color: #f0f0f0;"><hr></div>
 
-    <span class="title-loja">Smith Autopeças</span>
+    <span class="title-loja">{{peca.loja.nome}}</span>
 
     <p class="texto-endereco">
-        Estrada Rio São Paulo, nº 10<br>
-        Campo Grande, RJ<br>
-        CEP: 23012-123<br>
-        E-mail: smith@gmail.com<br>
-        Telefone: (21)3194-1243 / (21)97896-4653
+        {{peca.loja.logradouro}}<br>
+        {{peca.loja.bairro}}, {{peca.loja.cidade}}<br>
+        CEP: {{peca.loja.CEP}}<br>
+        E-mail: {{peca.loja.email}}<br>
+        Telefone: {{peca.loja.telefone1}} / {{peca.loja.telefone2}}
     </p>
 
     <ion-grid>

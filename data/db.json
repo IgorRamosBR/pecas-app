@@ -56,67 +56,115 @@
         {
             "id": 1, 
             "nome": "Suspensão dianteira",
+            "codigo": "XPTO83S",
             "marca": "Nakata", 
             "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
             "preco": 350.99,
+            "foto": "https://www.pontofrio-imagens.com.br/automotivo/Suspensao-Direcao/10625902/609663902/Kit-Suspensao-Rosca-Regulavel-Tebao-Nakata---Fox-11-em-Diante-10625902.jpg",
             "loja": {
                 "nome": "Gregorio Autopeças",
-                "local": "Campo Grande"
+                "logradouro": "Estrada do Campinho, nº10",
+                "bairro": "Campo Grande",
+                "cidade": "RJ",
+                "CEP": "23068-654",
+                "email": "gregorio@gmail.com",
+                "telefone1": "(21)3145-5896",
+                "telefone2": "(21)9845-5546"
             }
         },
         {
             "id": 2, 
             "nome": "Catalisador",
             "marca": "Eaton", 
+            "codigo": "XPTO59Z",
             "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
             "preco": 725.99,
+            "foto": "",
             "loja": {
                 "nome": "Smith Autopeças",
-                "local": "Campo Grande"
+                "logradouro": "Estrada Rio São Paulo, nº15",
+                "bairro": "Campo Grande",
+                "cidade": "RJ",
+                "CEP": "23064-348",
+                "email": "smith@gmail.com",
+                "telefone1": "(21)3122-5696",
+                "telefone2": "(21)9725-5066"
             }
         },
         {
             "id": 3, 
             "nome": "Filtro de Óleo",
+            "codigo": "XPTO002Q",
             "marca": "Volvo", 
             "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
             "preco": 105.99,
+            "foto": "",
             "loja": {
                 "nome": "Smith Autopeças",
-                "local": "Campo Grande"
+                "logradouro": "Estrada Rio São Paulo, nº15",
+                "bairro": "Campo Grande",
+                "cidade": "RJ",
+                "CEP": "23064-348",
+                "email": "smith@gmail.com",
+                "telefone1": "(21)3122-5696",
+                "telefone2": "(21)9725-5066"
             }
         },
         {
             "id": 4, 
             "nome": "Pastilha de Freio",
+            "codigo": "XPTO955D",
             "marca": "Caloi", 
             "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
             "preco": 25.99,
+            "foto": "",
             "loja": {
                 "nome": "Gregorio Autopeças",
-                "local": "Campo Grande"
+                "logradouro": "Estrada do Campinho, nº10",
+                "bairro": "Campo Grande",
+                "cidade": "RJ",
+                "CEP": "23068-654",
+                "email": "gregorio@gmail.com",
+                "telefone1": "(21)3145-5896",
+                "telefone2": "(21)9845-5546"
             }
         },
         {
             "id": 5, 
             "nome": "Embreagem",
+            "codigo": "XPTO552F",
             "marca": "Nakata", 
             "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
             "preco": 325.99,
+            "foto": "",
             "loja": {
                 "nome": "Smith Autopeças",
-                "local": "Campo Grande"
+                "logradouro": "Estrada Rio São Paulo, nº15",
+                "bairro": "Campo Grande",
+                "cidade": "RJ",
+                "CEP": "23064-348",
+                "email": "smith@gmail.com",
+                "telefone1": "(21)3122-5696",
+                "telefone2": "(21)9725-5066"
             }
         },
         {
             "id": 6, 
             "nome": "Iginição",
+            "codigo": "XPTO3469R",
             "marca": "Chevs", 
             "descricao": "Lorem ipsum vehicula porttitor adipiscing eleifend cursus ipsum, gravida etiam magna sollicitudin aliquet curae massa, viverra enim ipsum tempus tristique tempor...",
             "preco": 225.99,
+            "foto": "",
             "loja": {
                 "nome": "Gregorio Autopeças",
-                "local": "Campo Grande"
+                "logradouro": "Estrada do Campinho, nº10",
+                "bairro": "Campo Grande",
+                "cidade": "RJ",
+                "CEP": "23068-654",
+                "email": "gregorio@gmail.com",
+                "telefone1": "(21)3145-5896",
+                "telefone2": "(21)9845-5546"
             }
         }
     ]

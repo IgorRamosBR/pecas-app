@@ -6,14 +6,15 @@ page-detalhe-peca {
     margin-right: auto;
     width: auto;
     height: 250px;
-    padding: 20px
+    padding: 20px 20px 0 20px;
 }
 
 .title-peca {
+    display: inline-block;
     font-size: 2.5rem;
     font-weight: 500;
     color: #E64A19;
-    padding: 20px 0 10px 20px;
+    padding: 20px 0 0 20px;
 }
 
 .marca-peca {
@@ -27,7 +28,7 @@ page-detalhe-peca {
     font-size: 1rem;
     color: #424242;
     font-weight: 500;
-    padding: 20px;
+    padding: 30px 20px 0 20px;
     position: relative;
     float: right;
 }
