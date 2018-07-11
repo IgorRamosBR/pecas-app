@@ -1,0 +1,70 @@
+page-detalhe-peca {
+
+.img-peca {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 250px;
+    padding: 20px
+}
+
+.title-peca {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #E64A19;
+    padding: 20px 0 10px 20px;
+}
+
+.marca-peca {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.codigo-peca {
+    font-size: 1rem;
+    color: #424242;
+    font-weight: 500;
+    padding: 20px;
+    position: relative;
+    float: right;
+}
+
+.descricao-peca {
+    display: block;
+    padding: 10px 20px 20px 20px;
+}
+
+.preco-peca {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #E64A19;
+    padding: 0px 20px 20px 20px;
+}
+
+.btn-adicionar {
+    margin: 0px 20px 20px 20px;
+    position: relative;
+    float: right;
+}
+
+.title-loja {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #000000;
+    padding: 20px 0 0px 20px;
+}
+
+.texto-endereco {
+    padding: 0 20px 20px 20px;
+}
+
+.btn-centralizar {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+}
+
+}

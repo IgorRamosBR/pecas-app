@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { PecaProvider } from '../../providers/peca/peca';
+import { DetalhePecaPage } from '../detalhe-peca/detalhe-peca';
 
 /**
  * Generated class for the PecasPage page.
@@ -38,6 +39,12 @@ export class PecasPage {
   
   voltaSubcategoria() {
     this.navCtrl.pop();
+  }
+
+  openPeca(peca) {
+    this.navCtrl.push(DetalhePecaPage, {
+      peca: peca
+    })
   }
 
   buscarTodasAsPecas() {

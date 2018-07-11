@@ -15,6 +15,7 @@ import { SubcategoriasPage } from '../pages/subcategorias/subcategorias';
 import { SubcategoriaProvider } from '../providers/subcategoria/subcategoria';
 import { PecasPage } from '../pages/pecas/pecas';
 import { PecaProvider } from '../providers/peca/peca';
+import { DetalhePecaPage } from '../pages/detalhe-peca/detalhe-peca';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PecaProvider } from '../providers/peca/peca';
     ListPage,
     CategoriasPage,
     SubcategoriasPage,
-    PecasPage
+    PecasPage,
+    DetalhePecaPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { PecaProvider } from '../providers/peca/peca';
     ListPage,
     CategoriasPage,
     SubcategoriasPage,
-    PecasPage
+    PecasPage,
+    DetalhePecaPage
   ],
   providers: [
     StatusBar,
