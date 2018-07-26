@@ -19,6 +19,7 @@ import { PecasPage } from '../pages/pecas/pecas';
 import { PecaProvider } from '../providers/peca/peca';
 import { DetalhePecaPage } from '../pages/detalhe-peca/detalhe-peca';
 import { SegurancaProvider } from '../providers/seguranca/seguranca';
+import { ErrorHandlerProvider } from '../providers/error-handler/error-handler';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig(), http, options);
@@ -58,7 +59,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     SubcategoriaProvider,
     PecaProvider,
     SegurancaProvider,
-    {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http, RequestOptions]}
+    {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http, RequestOptions]},
+    ErrorHandlerProvider
   ]
 })
 export class AppModule {}

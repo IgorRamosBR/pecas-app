@@ -1,6 +1,7 @@
 import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { JwtHelper } from '../../../node_modules/angular2-jwt';
+import { ErrorHandlerProvider } from '../error-handler/error-handler';
 
 /*
   Generated class for the SegurancaProvider provider.
@@ -11,12 +12,13 @@ import { JwtHelper } from '../../../node_modules/angular2-jwt';
 @Injectable()
 export class SegurancaProvider {
 
-  oauthTokenUrl = 'http://localhost:8080/oauth/token';
+  oauthTokenUrl = 'http://localhost:8080/oauth/tokens';
   //jwtPayload: any;
 
   constructor(
     private http: Http,
-    private jwtHelper: JwtHelper
+    private jwtHelper: JwtHelper,
+    private errorHandler: ErrorHandlerProvider
   ) {
     console.log('Hello SegurancaProvider Provider');
   }
@@ -42,7 +44,9 @@ export class SegurancaProvider {
       console.log(response.json().access_token);
       this.armazenarToken(response.json().access_token);
     })
-    .catch(response => console.log(response));
+    .catch(response => {
+      this.errorHandler.handle("Falha na comunicação com o servidor");
+    });
   }
 
   private armazenarToken(token: string) {
