@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoriaProvider } from '../../providers/categoria/categoria';
 import { SubcategoriasPage } from '../subcategorias/subcategorias';
-import { SegurancaProvider } from '../../providers/seguranca/seguranca';
 
 /**
  * Generated class for the CategoriasPage page.
@@ -22,8 +21,7 @@ export class CategoriasPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private categoriaProvider: CategoriaProvider,
-              private segurancaProvider: SegurancaProvider) {
+              private categoriaProvider: CategoriaProvider) {
   }
 
   ionViewDidLoad() {

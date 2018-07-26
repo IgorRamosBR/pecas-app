@@ -5,8 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { CategoriasPage } from '../pages/categorias/categorias';
-import { PecasPage } from '../pages/pecas/pecas';
-import { DetalhePecaPage } from '../pages/detalhe-peca/detalhe-peca';
 import { SegurancaProvider } from '../providers/seguranca/seguranca';
 
 @Component({
