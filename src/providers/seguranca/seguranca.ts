@@ -2,7 +2,7 @@ import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { JwtHelper } from '../../../node_modules/angular2-jwt';
 import { ErrorHandlerProvider } from '../error-handler/error-handler';
-
+import 'rxjs/add/operator/toPromise';
 /*
   Generated class for the SegurancaProvider provider.
 
@@ -12,7 +12,7 @@ import { ErrorHandlerProvider } from '../error-handler/error-handler';
 @Injectable()
 export class SegurancaProvider {
 
-  oauthTokenUrl = 'http://localhost:8080/oauth/tokens';
+  oauthTokenUrl = 'http://localhost:8080/oauth/token';
   //jwtPayload: any;
 
   constructor(
@@ -24,21 +24,19 @@ export class SegurancaProvider {
   }
 
   carregarToken() {
-    const token = localStorage.getItem('token');
-
     if (this.isAccessTokenInvalido) {
       this.buscaToken();
     }
   }
 
-  private buscaToken() {
+  buscaToken(): Promise<void> {
     const headers = new Headers();
     headers.append('Content-type', 'application/x-www-form-urlencoded');
     headers.append('Authorization', 'Basic bW9iaWxlLWNsaWVudDp0ZW1wLXNlY3JldA==');
 
     const body = `grant_type=client_credentials`;
 
-    this.http.post(this.oauthTokenUrl, body, { headers })
+    return this.http.post(this.oauthTokenUrl, body, { headers })
     .toPromise()
     .then(response => {
       console.log(response.json().access_token);
