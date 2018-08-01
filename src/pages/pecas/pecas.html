@@ -7,28 +7,13 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Catálogo de peças</ion-title>
+    <ion-title>{{subcategoria.nome}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <!-- Begin Breadcrumb -->
-  <ul class="breadcrumb">
-    <li>
-      <a href="#">Todas as peças</a>
-      <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="ion-chevron-right"></ion-icon>
-    </li>
-    <li (click)="voltaCategoria()">
-      <a href="#">{{categoriaNome}}</a>
-      <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="ion-chevron-right"></ion-icon>
-    </li>
-    <li (click)="voltaSubcategoria()">
-        <a href="#">{{subcategoriaNome}}</a>
-      </li>
-  </ul>
-  <!-- end Breadcrumb -->
   <ion-list>
     <ion-card *ngFor="let peca of pecas" (click)="openPeca(peca)">
       <ion-card-content style="padding-bottom: 0px; padding-top: 0px;">

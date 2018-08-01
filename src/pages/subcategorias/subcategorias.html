@@ -3,17 +3,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Escolha uma subcategoria</ion-title>
+    <ion-title>{{categoria.nome}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <!-- begin Breadcrumb -->
-  <ul class="breadcrumb">
-    <li><a href="#">Todas as peças</a><ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="ion-chevron-right"></ion-icon></li>
-    <li (click)="voltaCategoria()"><a href="#">{{categoriaNome}}</a>  <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="ion-chevron-right"></ion-icon></li>
-  </ul>
-  <!-- end Breadcrumb -->
   <ion-list>
     <button ion-item *ngFor="let subcategoria of subcategorias" (click)="openPage(subcategoria)">
       <span>{{subcategoria.nome}}</span>

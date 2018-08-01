@@ -19,31 +19,19 @@ import { ErrorHandlerProvider } from '../../providers/error-handler/error-handle
 })
 export class PecasPage {
 
-  categoriaNome = '';
-  subcategoriaNome = '';
-  subcategoriaId = -1;
+  subcategoria: any;
   pecas = []
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               private pecasProvider: PecaProvider,
               private errorHandlerProvider: ErrorHandlerProvider) {
-    this.categoriaNome = navParams.get('nomeCategoria');
-    this.subcategoriaNome = navParams.get('nomeSubcategoria');
-    this.subcategoriaId = navParams.get('idSubcategoria');
+    this.subcategoria = navParams.get('subcategoria');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PecasPage');
     this.buscarTodasAsPecas();
-  }
-
-  voltaCategoria() {
-    this.navCtrl.remove(1, 2);
-  }
-  
-  voltaSubcategoria() {
-    this.navCtrl.pop();
   }
 
   openPeca(peca) {
@@ -53,7 +41,7 @@ export class PecasPage {
   }
 
   buscarTodasAsPecas() {
-    this.pecasProvider.buscarPecasPorId(this.subcategoriaId)
+    this.pecasProvider.buscarPecasPorId(this.subcategoria.id)
       .then(pecas => this.pecas = pecas)
       .catch(error => this.errorHandlerProvider.handle('Falha ao acessar subcategorias. Por favor verifique sua conexão com a Internet.'));
   }

@@ -18,37 +18,29 @@ import { ErrorHandlerProvider } from '../../providers/error-handler/error-handle
 })
 export class SubcategoriasPage {
 
-  categoriaId = 0;
-  categoriaNome = '';
+  categoria: any;
   subcategorias = [];
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               private subcategoriaProvider: SubcategoriaProvider,
               private errorHandlerProvider: ErrorHandlerProvider) {
-    this.categoriaId = navParams.get('idCategoria');
-    this.categoriaNome = navParams.get('nomeCategoria');
+    this.categoria = navParams.get('categoria');
   }
 
   ionViewDidLoad() {
     this.buscarSubcategorias();
   }
 
-  voltaCategoria() {
-    this.navCtrl.pop();
-  }
-
   openPage(subcategoria) {
     this.navCtrl.push(PecasPage, {
-      nomeCategoria: this.categoriaNome,
-      nomeSubcategoria: subcategoria.nome,
-      idSubcategoria: subcategoria.id
+      subcategoria: subcategoria
     });
   }
 
   buscarSubcategorias() {
-    this.subcategoriaProvider.buscarSubcategoriasPorId(this.categoriaId)
-      .then(subcategorias => this.subcategorias = subcategorias)
+    this.subcategoriaProvider.buscarSubcategoriasPorId(this.categoria.id)
+      .then(subcategorias => this.subcategorias = subcategorias) 
       .catch(error => this.errorHandlerProvider.handle('Falha ao acessar subcategorias. Por favor verifique sua conexão com a Internet.'));
   }
 

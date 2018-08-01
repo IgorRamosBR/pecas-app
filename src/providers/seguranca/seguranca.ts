@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { JwtHelper } from '../../../node_modules/angular2-jwt';
 import { ErrorHandlerProvider } from '../error-handler/error-handler';
 import 'rxjs/add/operator/toPromise';
+import { MY_CONFIG } from '../../app/app-config';
 /*
   Generated class for the SegurancaProvider provider.
 
@@ -12,7 +13,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class SegurancaProvider {
 
-  oauthTokenUrl = 'http://localhost:8080/oauth/token';
+  oauthTokenUrl = MY_CONFIG.oauthApiEndpoint + '/oauth/token';
   //jwtPayload: any;
 
   constructor(

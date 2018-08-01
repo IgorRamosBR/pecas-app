@@ -28,11 +28,9 @@ export class CategoriasPage {
     this.buscarTodasAsCategorias();
   }
 
-  openPage(id, nome) {
-    console.log('Categoria - nome' + nome);
+  openPage(categoria) {
     this.navCtrl.push(SubcategoriasPage, {
-      idCategoria: id,
-      nomeCategoria: nome
+      categoria: categoria
     });
   }
 
