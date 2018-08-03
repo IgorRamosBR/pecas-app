@@ -1,0 +1,69 @@
+<!--
+  Generated template for the FiltroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Aplicar filtro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider color="light">Compatível com:</ion-item-divider>
+    <ion-item>
+      <ion-label>Montadora</ion-label>
+      <ion-select >
+        <ion-option value="nes">Ford</ion-option>
+        <ion-option value="n64">GM</ion-option>
+        <ion-option value="ps">Volvo</ion-option>
+        <ion-option value="genesis">Hyundai</ion-option>
+        <ion-option value="saturn">BMW</ion-option>
+        <ion-option value="snes">Audi</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Modelo</ion-label>
+      <ion-select >
+          <ion-option value="nes">Astra</ion-option>
+          <ion-option value="n64">Celta</ion-option>
+          <ion-option value="ps">Corsa</ion-option>
+          <ion-option value="genesis">S10</ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider color="light">Preço:</ion-item-divider>
+    <ion-item>
+      <ion-range dualKnobs="true" pin="true" color="secondary" min="200" max="2000">
+        <ion-icon range-left ><span style="font-size: 1.8rem">200</span></ion-icon>
+        <ion-icon range-right ><span style="font-size: 1.8rem">2000</span></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider color="light">Marca da peça:</ion-item-divider>
+    <ion-item>
+      <ion-label>Marca</ion-label>
+      <ion-select >
+          <ion-option value="nes">Nakata</ion-option>
+          <ion-option value="n64">Eaton</ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-group>
+      <ion-item-divider color="light">Selecionar loja:</ion-item-divider>
+      <ion-item>
+        <ion-label>Loja</ion-label>
+        <ion-select >
+            <ion-option value="nes">Gregorio</ion-option>
+            <ion-option value="n64">Smith Autopeças</ion-option>
+          </ion-select>
+      </ion-item>
+    </ion-item-group>
+</ion-content>

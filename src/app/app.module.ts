@@ -10,7 +10,6 @@ import { JwtHelper, AuthHttp, AuthConfig } from 'angular2-jwt'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { CategoriaProvider } from '../providers/categoria/categoria';
 import { CategoriasPage } from '../pages/categorias/categorias';
 import { SubcategoriasPage } from '../pages/subcategorias/subcategorias';
@@ -21,6 +20,7 @@ import { DetalhePecaPage } from '../pages/detalhe-peca/detalhe-peca';
 import { SegurancaProvider } from '../providers/seguranca/seguranca';
 import { ErrorHandlerProvider } from '../providers/error-handler/error-handler';
 import { WrapperHttpProvider } from '../providers/wrapper-http/wrapper-http';
+import { FiltroPage } from '../pages/filtro/filtro';
 
 export function authHttpServiceFactory(segurancaProvider: SegurancaProvider, http: Http, options: RequestOptions) {
   return new WrapperHttpProvider(segurancaProvider ,new AuthConfig(), http, options);
@@ -30,11 +30,11 @@ export function authHttpServiceFactory(segurancaProvider: SegurancaProvider, htt
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     CategoriasPage,
     SubcategoriasPage,
     PecasPage,
-    DetalhePecaPage
+    DetalhePecaPage,
+    FiltroPage
   ],
   imports: [
     BrowserModule,
@@ -45,11 +45,11 @@ export function authHttpServiceFactory(segurancaProvider: SegurancaProvider, htt
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     CategoriasPage,
     SubcategoriasPage,
     PecasPage,
-    DetalhePecaPage
+    DetalhePecaPage,
+    FiltroPage
   ],
   providers: [
     StatusBar,

@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { CategoriasPage } from '../pages/categorias/categorias';
 import { SegurancaProvider } from '../providers/seguranca/seguranca';
+import { FiltroPage } from '../pages/filtro/filtro';
 
 @Component({
   templateUrl: 'app.html'
