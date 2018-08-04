@@ -32,12 +32,12 @@ export class PecasPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PecasPage');
     this.buscarTodasAsPecas();
-    this.events.subscribe('Teste', (time) => {
-      // user and time are the same arguments passed in `events.publish(user, time)`
-      console.log(time);
+    this.events.subscribe('filtro-pecas', x => {
+      this.pecas = x;
+      console.log("Evento Filtro de peças.")
     });
+    
   }
 
   openPeca(peca) {
@@ -47,14 +47,19 @@ export class PecasPage {
   }
 
   openFilter() {
+    var pecasReceived = JSON.parse(localStorage.getItem("pecas"));
     this.navCtrl.push(FiltroPage, {
-      pecas: this.pecas
+      pecas: pecasReceived
     })
   }
 
   buscarTodasAsPecas() {
     this.pecasProvider.buscarPecasPorId(this.subcategoria.id)
-      .then(pecas => this.pecas = pecas)
+      .then(pecas => {
+        this.pecas = pecas;
+        localStorage.setItem("pecas", JSON.stringify(pecas)); 
+        console.log("Buscando peças....");
+      })
       .catch(error => this.errorHandlerProvider.handle('Falha ao acessar subcategorias. Por favor verifique sua conexão com a Internet.'));
   }
 

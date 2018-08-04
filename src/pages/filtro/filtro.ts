@@ -25,44 +25,57 @@ export class FiltroPage {
   montadoras = [];
   marcas = [];
   lojas = [];
+  max = 0;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public events: Events) {
     this.pecas = navParams.get('pecas');
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FiltroPage');
     this.carregarMarcas();
     this.carregarPrecos();
     this.carregarLojas();
   }
 
+  ionViewDidLoad() {
+  }
+
   ionViewWillLeave() {
-    console.log('ionViewDidLeave FiltroPage ' + 'testando');
-    this.events.publish('filtro-pecas', this.pecas);
+    if(!this.filtroIsNull())
+      this.events.publish('filtro-pecas', this.filtrar());
   }
 
   carregarMarcas() {
-    this.marcas = this.pecas.map(x => x.marca);
-    console.log(this.marcas);
+    this.marcas = this.pecas.map(x => x.marca).sort();
   }
   
   carregarPrecos() {
     this.preco.upper = Math.max.apply(Math, this.pecas.map(x => x.preco));
-    this.preco.lower = Math.min.apply(Math, this.pecas.map(x => x.preco));
-    console.log(this.preco); 
+    this.max = this.preco.upper;
+    //this.preco.lower = Math.min.apply(Math, this.pecas.map(x => x.preco));
+   
   }
 
   carregarLojas() {
-    this.lojas = Array.from(new Set(this.pecas.map(x => x.loja.nome)));
-    console.log(this.lojas);
+    this.lojas = Array.from(new Set(this.pecas.map(x => x.loja.nome).sort()));
   }
 
-  filtraMarca() {
-    this.pecas = Array.from(new Set(this.pecas.map(x => x.peca.marca == this.marca)));
+  filtrar() {
+    let pecasfiltradas = this.pecas.filter(x => {
+      let resultado = true;
+      if(this.marca != '' && x.marca != this.marca)
+        resultado = false;
+      if(this.loja != '' && x.loja.nome != this.loja)
+        resultado = false;
+      if(x.preco < this.preco.lower || x.preco > this.preco.upper) 
+        resultado = false;
+      return resultado;
+    });
+    return pecasfiltradas;
   }
 
+  filtroIsNull() {
+    if (this.loja == '' && this.marca == '' && this.preco.lower == 0 && this.preco.upper == this.max)
+      return true;
+  }
 }
 

@@ -40,9 +40,9 @@
   <ion-item-group>
     <ion-item-divider color="light">Preço:</ion-item-divider>
     <ion-item>
-      <ion-range dualKnobs="true" pin="true" color="secondary" min="200" max="2000">
-        <ion-icon range-left ><span style="font-size: 1.8rem">200</span></ion-icon>
-        <ion-icon range-right ><span style="font-size: 1.8rem">2000</span></ion-icon>
+      <ion-range [(ngModel)]="preco" dualKnobs="true" pin="true" color="secondary" min="0" max="{{max}}">
+        <ion-icon range-left ><span style="font-size: 1.8rem">{{preco.lower}}</span></ion-icon>
+        <ion-icon range-right ><span style="font-size: 1.8rem">{{preco.upper}}</span></ion-icon>
       </ion-range>
     </ion-item>
   </ion-item-group>
@@ -50,19 +50,21 @@
     <ion-item-divider color="light">Marca da peça:</ion-item-divider>
     <ion-item>
       <ion-label>Marca</ion-label>
-      <ion-select >
-          <ion-option value="nes">Nakata</ion-option>
-          <ion-option value="n64">Eaton</ion-option>
+      <ion-select [(ngModel)]="marca">
+          <div *ngFor="let m of marcas">
+            <ion-option value="{{m}}">{{m}}</ion-option>
+          </div>
         </ion-select>
     </ion-item>
   </ion-item-group>
   <ion-item-group>
-      <ion-item-divider color="light">Selecionar loja:</ion-item-divider>
+      <ion-item-divider color="light">Loja da peça:</ion-item-divider>
       <ion-item>
         <ion-label>Loja</ion-label>
-        <ion-select >
-            <ion-option value="nes">Gregorio</ion-option>
-            <ion-option value="n64">Smith Autopeças</ion-option>
+        <ion-select [(ngModel)]="loja">
+          <div *ngFor="let l of lojas">
+            <ion-option value="{{l}}">{{l}}</ion-option>
+          </div>
           </ion-select>
       </ion-item>
     </ion-item-group>
